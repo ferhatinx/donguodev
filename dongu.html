@@ -134,7 +134,7 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var txt = document.createTextNode("f");
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
@@ -164,15 +164,17 @@ function newElement() {
   var yazi = document.getElementById("myInput").value;
   var t = document.createTextNode(yazi);
   li.appendChild(t);
-  if (yazi === '') {
+  if (yazi === '') 
+  {
     alert("Boş olamaz");
-  } else {
+  } 
+  else {
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var txt = document.createTextNode("Sil");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
